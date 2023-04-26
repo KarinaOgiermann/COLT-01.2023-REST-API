@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "e1d231f3-736f-4983-aa80-850ef4615cc9",
+		"name": "Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25675935"
+	},
+	"item": [
+		{
+			"name": "Get a Card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/643847f8d4721bec16c2f83d?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						"643847f8d4721bec16c2f83d"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/?key={{key}}&token={{token}}&name=TestCard&idList=642c73375c7b7d1d27fc2fca",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "TestCard"
+						},
+						{
+							"key": "idList",
+							"value": "642c73375c7b7d1d27fc2fca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/643847f8d4721bec16c2f83d?key={{key}}&token={{token}}&idList=642c73375c7b7d1d27fc2fcc",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						"643847f8d4721bec16c2f83d"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idList",
+							"value": "642c73375c7b7d1d27fc2fcc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/{^[0-9a-fA-F]{24}$}?key=9a7562267ea6c2aae1a37200c509e409&token=ATTAc6834981f5222313fa02cb56fdd04d139965f9a5ac79066f05221587a7dea96c139EA441&name=DeleteACard COLT",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"{^[0-9a-fA-F]{24}$}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "9a7562267ea6c2aae1a37200c509e409"
+						},
+						{
+							"key": "token",
+							"value": "ATTAc6834981f5222313fa02cb56fdd04d139965f9a5ac79066f05221587a7dea96c139EA441"
+						},
+						{
+							"key": "name",
+							"value": "DeleteACard COLT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the Board the Card is on",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/643847f8d4721bec16c2f83d/board?key={{key}}&token={{token}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						"643847f8d4721bec16c2f83d",
+						"board"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Member to a card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards/643847f8d4721bec16c2f83d/idMembers?key={{key}}&token={{token}}&idMembers=Lolek",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						"643847f8d4721bec16c2f83d",
+						"idMembers"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idMembers",
+							"value": "Lolek"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Card \"TestCase2\"",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/1/cards?key={{key}}&token={{token}}&idList=642c73375c7b7d1d27fc2fcb",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "idList",
+							"value": "642c73375c7b7d1d27fc2fcb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
